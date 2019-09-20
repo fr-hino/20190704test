@@ -5,4 +5,4 @@ steps:
   #   env: ["PROJECT_ROOT=hello"]
   # Upload it into a GCS bucket.
   - name: "gcr.io/cloud-builders/gsutil"
-    args: ["-m", "cp", "-r", "testdir/", "gs://frssbi-sandbox/"]
+    args: ["-m", "rsync", "-d", "-r", "testdir/", "gs://frssbi-sandbox/"]
